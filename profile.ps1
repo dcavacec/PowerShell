@@ -51,7 +51,6 @@ Set-PSReadLineOption -PredictionSource HistoryAndPlugin `
     -HistorySearchCursorMovesToEnd `
     -ShowToolTips `
     -EditMode Windows `
-    -BellStyle None
 
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -215,4 +214,5 @@ function prompt {
     return $PsPrompt.ToString()
 }
 
+Import-Module -FullyQualifiedName ${PSScriptRoot}\src\PowerTools.psm1
 #endregion
